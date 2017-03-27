@@ -1,1 +1,21 @@
-<p>Freeze panel</p>
+<h2>Freeze panel</h2>
+
+<p>
+  When the button below is pressed the
+  isFrozen boolean will be toggled.
+</p>
+
+<button {{action "toggleIsFrozen"}}>
+  Toggle isFrozen
+</button>
+
+<p>
+  isFrozen: {{isFrozen}}
+</p>
+
+<p>
+  When is frozen is set to true make it so the panel
+  cannot be opened or closed.
+</p>
+
+{{c-panel}}
