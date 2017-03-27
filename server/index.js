@@ -49,6 +49,6 @@ module.exports = function(app) {
     setTimeout(() => {
       var temp = Math.floor(Math.random() * 100);
       res.send('' + temp);
-    }, 2000);
+    }, 1000);
   });
 };

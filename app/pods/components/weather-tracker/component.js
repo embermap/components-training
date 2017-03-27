@@ -10,6 +10,6 @@ export default Ember.Component.extend({
 
     let weather = yield Ember.$.get('/weather');
     this.set('weather', weather);
-  })
+  }).restartable()
 
 });

@@ -1,11 +1,14 @@
+<p>Look up the weather</p>
 <label>ZIP code:</label>
 
 <input type="number" oninput={{action (perform loadWeather) value='target.value'}}>
 
-<p>
-  The weather is {{weather}}
-</p>
+{{#if weather}}
+  <p>
+    The weather is {{weather}}
+  </p>
+{{/if}}
 
 {{#if loadWeather.isRunning}}
-  <p>....</p>
+  <p>( fetching... )</p>
 {{/if}}
