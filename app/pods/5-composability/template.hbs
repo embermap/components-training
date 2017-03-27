@@ -1,1 +1,28 @@
-<p>Composability</p>
+{{link-to "Back to exercises" "index"}}
+
+<h2>Composability</h2>
+
+<p>
+  When the button is clicked the box should fly
+  on or off the screen.
+</p>
+
+<p>
+  If an HTML element has the ".flyable" class it will be hidden
+  off the screen.
+</p>
+
+<p>
+  You can then add the ".flyable-open" class to animate the element
+  back onto the screen when isOpen is true.
+</p>
+
+<button {{action "toggleIsOpen"}}>
+  Toggle isOpen
+</button>
+
+<p>
+  isOpen: {{isOpen}}
+</p>
+
+{{menu-box}}
