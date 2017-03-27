@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'components-training',
+    podModulePrefix: 'components-training/pods',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
@@ -22,6 +23,10 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+
+  ENV['ember-component-css'] = {
+    namespacing: false
+  }
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

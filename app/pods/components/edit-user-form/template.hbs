@@ -1,0 +1,19 @@
+<form {{action "save" on="submit"}}>
+
+  <div class="Edit-user-form__input">
+    <label class="Edit-user-form__label">
+      First name
+    </label>
+    {{input value=user.firstname}}
+  </div>
+
+  <div class="Edit-user-form__input">
+    <label class="Edit-user-form__label">
+      Last name
+    </label>
+    {{input value=user.lastname}}
+  </div>
+
+  <input type="submit" value="Save">
+
+</form>

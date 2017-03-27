@@ -1,0 +1,44 @@
+.Carousel-slider {
+  &__display {
+    overflow: hidden;
+    margin: 0 -23px;
+  }
+  &__display-inner {
+    display: flex;
+    margin-right: 10%;
+    transform: translateX(10%);
+    transition: all 0.3s;
+  }
+  &__slide {
+    flex-shrink: 0;
+    height: 300px;
+    width: 80%;
+    margin-right: 3%;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+  }
+  &__nav {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+  }
+  &__nav-item {
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+    }
+
+    &--active {
+      box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+    }
+  }
+}

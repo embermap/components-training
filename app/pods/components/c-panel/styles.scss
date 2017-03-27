@@ -1,0 +1,26 @@
+.Panel {
+  border: 1px solid #ddd;
+  border-radius: 3px 3px 0 0;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+
+    padding: 1em;
+
+    &__title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      color: #333;
+    }
+  }
+
+  &__body {
+    padding: 1em;
+  }
+}

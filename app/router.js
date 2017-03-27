@@ -7,6 +7,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('1-c-panel');
+  this.route('2-freeze-panel');
+  this.route('3-side-effects');
+  this.route('4-data-loading-components');
+  this.route('5-composability');
+  this.route('6-declarative');
 });
 
 export default Router;

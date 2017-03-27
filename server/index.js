@@ -10,15 +10,45 @@
 // };
 
 module.exports = function(app) {
-  const globSync   = require('glob').sync;
-  var mocks      = globSync('./mocks/**/*.js', { cwd: __dirname }).map(require);
-  var proxies    = globSync('./proxies/**/*.js', { cwd: __dirname }).map(require);
+  var jsonApi = require("jsonapi-server");
 
-  // Log proxy requests
-  const morgan  = require('morgan');
-  app.use(morgan('dev'));
+  jsonApi.setConfig({
+    port: 16006
+  });
 
-  mocks.forEach(function(route) { route(app); });
-  proxies.forEach(function(route) { route(app); });
+  jsonApi.define({
+    resource: "users",
+    handlers: new jsonApi.MemoryHandler(),
+    attributes: {
+      name: jsonApi.Joi.string(),
+      email: jsonApi.Joi.string(),
+      firstname: jsonApi.Joi.string(),
+      lastname: jsonApi.Joi.string()
+    },
+    examples: [
+      {
+        id: '1',
+        type: 'users',
+        email: 'ryanto@gmail.com',
+        firstname: 'Ryan',
+        lastname: 'Toronto'
+      },
+      {
+        id: '2',
+        type: 'users',
+        email: 'sam.selikoff@gmail.com',
+        firstname: 'Sam',
+        lastname: 'Selikoff'
+      }
+    ]
+  });
 
+  jsonApi.start();
+
+  app.get('/weather', function(req, res) {
+    setTimeout(() => {
+      var temp = Math.floor(Math.random() * 100);
+      res.send('' + temp);
+    }, 1000);
+  });
 };
