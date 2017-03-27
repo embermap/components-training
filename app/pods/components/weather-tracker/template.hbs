@@ -1,7 +1,8 @@
-<p>Look up the weather</p>
+<p>Look up the weather by ZIP.</p>
+<p>Once the user inputs 5 digits, use <code>Ember.$.get('/weather')</code> and set the result as <code>weather</code>.</p>
 <label>ZIP code:</label>
 
-<input type="number" oninput={{action (perform loadWeather) value='target.value'}}>
+<input type="number">
 
 {{#if weather}}
   <p>
@@ -9,6 +10,4 @@
   </p>
 {{/if}}
 
-{{#if loadWeather.isRunning}}
-  <p>( fetching... )</p>
-{{/if}}
+<p>Show a loading message down here while the request is happening.</p>
