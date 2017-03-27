@@ -1,0 +1,11 @@
+<label>ZIP code:</label>
+
+<input type="number" oninput={{action (perform loadWeather) value='target.value'}}>
+
+<p>
+  The weather is {{weather}}
+</p>
+
+{{#if loadWeather.isRunning}}
+  <p>....</p>
+{{/if}}
