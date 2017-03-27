@@ -1,0 +1,13 @@
+<p>Look up the weather by ZIP.</p>
+<p>Once the user inputs 5 digits, use <code>Ember.$.get('/weather')</code> and set the result as <code>weather</code>.</p>
+<label>ZIP code:</label>
+
+<input type="number">
+
+{{#if weather}}
+  <p>
+    The weather is {{weather}}
+  </p>
+{{/if}}
+
+<p>Show a loading message down here while the request is happening.</p>

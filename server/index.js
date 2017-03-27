@@ -9,7 +9,7 @@
 //   });
 // };
 
-module.exports = function() {
+module.exports = function(app) {
   var jsonApi = require("jsonapi-server");
 
   jsonApi.setConfig({
@@ -44,4 +44,11 @@ module.exports = function() {
   });
 
   jsonApi.start();
+
+  app.get('/weather', function(req, res) {
+    setTimeout(() => {
+      var temp = Math.floor(Math.random() * 100);
+      res.send('' + temp);
+    }, 1000);
+  });
 };
