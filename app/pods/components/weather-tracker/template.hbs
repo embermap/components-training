@@ -2,12 +2,16 @@
 <p>Once the user inputs 5 digits, use <code>Ember.$.get('/weather')</code> and set the result as <code>weather</code>.</p>
 <label>ZIP code:</label>
 
-<input type="number">
+<input type="number" oninput={{action 'loadWeather' value='target.value'}}>
 
 {{#if weather}}
   <p>
     The weather is {{weather}}
   </p>
+{{/if}}
+
+{{#if isLoading}}
+  I'm loading!
 {{/if}}
 
 <p>Show a loading message down here while the request is happening.</p>
