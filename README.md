@@ -24,3 +24,4 @@ Here's how you can install the training app:
 1. Run NPM install: `npm install` (You might get some warnings, thats ok!)
 1. Build the app `ember build`
 1. You're all set! We'll see you Monday!
+1. Use new port e.g. `ember serve --port 1234`, if your other ports are taken by other projects
