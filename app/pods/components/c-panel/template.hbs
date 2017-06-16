@@ -5,16 +5,16 @@
        class="Panel__header__title"
        {{action 'toggleIsOpen'}}>
 
-      Title here
+      Title click me to open
 
     </a>
 
   </div>
 
-  <div class="Panel__body">
-
-    Body here
-
-  </div>
+  {{#if isOpen}}
+    <div class="Panel__body">
+      Body if i'm visible, i'm open
+    </div>
+  {{/if}}
 
 </div>

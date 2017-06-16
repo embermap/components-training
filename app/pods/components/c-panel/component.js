@@ -1,9 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  isOpen: false,
+
   actions: {
     toggleIsOpen() {
-      console.log('sup');
+      this.toggleProperty('isOpen');
     }
   }
 });
