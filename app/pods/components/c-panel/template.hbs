@@ -2,18 +2,19 @@
 
   <div class="Panel__header">
     <a href="#"
-       class="Panel__header__title">
+      class="Panel__header__title"
+      {{action 'toggleIsOpen'}}>
 
-      Title here
+      {{title}}
 
     </a>
 
   </div>
 
-  <div class="Panel__body">
-
-    Body here
-
-  </div>
+  {{#if isOpen}}
+    <div class="Panel__body">
+      {{body}}
+    </div>
+  {{/if}}
 
 </div>
